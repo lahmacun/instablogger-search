@@ -1,7 +1,9 @@
 $(function() {
+    let base_url = "https://zahidefe.net";
+
     $.ajax({
         type: "GET",
-        url: "https://zahidefe.net/wp-json/wp/v2/posts?page=1&per_page=10&_embed",
+        url: base_url + "/wp-json/wp/v2/posts?page=1&per_page=10&_embed",
         success: function(response) {
             $('.posts').html("");
             response.forEach(function(post) {
@@ -26,9 +28,9 @@ $(function() {
         e.preventDefault();
         var search_term = $('.search').val();
         if ($.trim(search_term) == '') {
-            var search_url = "https://zahidefe.net/wp-json/wp/v2/posts?page=1&per_page=10&_embed";
+            var search_url = base_url + "/wp-json/wp/v2/posts?page=1&per_page=10&_embed";
         } else {
-            var search_url = "https://zahidefe.net/wp-json/wp/v2/posts?meta_key=lahmacun_post_code&meta_value=" + search_term + "&_embed";
+            var search_url = base_url + "/wp-json/wp/v2/posts?meta_key=lahmacun_post_code&meta_value=" + search_term + "&_embed";
         }
         $('.posts').html('<img src="assets/img/loading.svg" />');
         $.ajax({
