@@ -30,7 +30,7 @@ $(function() {
         } else {
             var search_url = "https://zahidefe.net/wp-json/wp/v2/posts?meta_key=lahmacun_post_code&meta_value=" + search_term + "&_embed";
         }
-        $('.posts').html('<img src="/assets/img/loading.svg" />');
+        $('.posts').html('<img src="assets/img/loading.svg" />');
         $.ajax({
             type: "GET",
             url: search_url,

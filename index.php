@@ -17,7 +17,7 @@
             <input type="search" class="search" placeholder="Search..."/>
             <button class="go search-button"><i class="fa fa-search"></i></button>
             <a href="https://zahidefe.net" class="logo" title="">
-                <img src="/assets/img/logo.png" alt="Zahidefe.net">
+                <img src="assets/img/logo.png" alt="Zahidefe.net">
             </a>
         </form>
     </div>
