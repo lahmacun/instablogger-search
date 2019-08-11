@@ -16,7 +16,7 @@ $(function() {
                     '\t\t\t\t\t    <p>' + post.excerpt.rendered + '</p>\n' +
                     '\t\t\t\t    </div>\n' +
                     '\t\t\t\t    <div class="card-action">\n' +
-                    '\t\t\t\t\t    <a href="+ post.link + '">Yazıyı Oku</a>\n' +
+                    '\t\t\t\t\t    <a href="' + post.link + '">Yazıyı Oku</a>\n' +
                     '\t\t\t\t    </div>\n' +
                     '\t\t\t    </div>\n' +
                     '\t\t    </div>');
