@@ -7,12 +7,12 @@ $(function() {
         success: function(response) {
             $('.posts').html("");
             response.forEach(function(post) {
-                var post_image = post._embedded['wp:featuredmedia'] ? '<div class="card-image"><img src="' + post._embedded['wp:featuredmedia']['0'].source_url + '" alt="" style="height: 100%;"></div>' : '';
+                var post_image = post._embedded['wp:featuredmedia'] ? '<div class="card-image"><a href="' + post.link + '"><img src="' + post._embedded['wp:featuredmedia']['0'].source_url + '" alt="" style="height: 100%;"></a></div>' : '';
                 $(".posts").append('<div class="col s12 m6">\n' +
                     '\t\t\t    <div class="card darken-1">\n' +
                     post_image +
                     '\t\t\t\t    <div class="card-content white-text">\n' +
-                    '\t\t\t\t\t    <span class="card-title">' + post.title.rendered + '</span>\n' +
+                    '\t\t\t\t\t    <span class="card-title"><a href="' + post.link + '">' + post.title.rendered + '</a></span>\n' +
                     '\t\t\t\t\t    <p>' + post.excerpt.rendered + '</p>\n' +
                     '\t\t\t\t    </div>\n' +
                     '\t\t\t\t    <div class="card-action">\n' +
